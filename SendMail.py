@@ -24,11 +24,11 @@ class SenderWindow(QtWidgets.QMainWindow):
         self.ui.sendLaterButton.clicked.connect(self.click_send_later)
 
     def click_add_files(self):
-        dlg = QtWidgets.QFileDialog()
-        dlg.setFileMode(QtWidgets.QFileDialog.ExistingFiles)
+        dialog = QtWidgets.QFileDialog()
+        dialog.setFileMode(QtWidgets.QFileDialog.ExistingFiles)
 
-        if dlg.exec_():
-            self.attachments = dlg.selectedFiles()
+        if dialog.exec_():
+            self.attachments = dialog.selectedFiles()
             text = "\n".join([item.split("/")[-1]
                               for item in self.attachments])
             self.attachmentsLabel.setText(text)

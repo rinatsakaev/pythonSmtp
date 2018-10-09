@@ -27,10 +27,10 @@ class MainWIndow(QtWidgets.QMainWindow):
         Validates user input
         :return:
         """
-        if self.serverEdit.text() == "" or \
-           self.portEdit.text() == "" or \
-           self.loginEdit.text() == "" or \
-           self.passwordEdit.text() == "":
+        if (self.serverEdit.text() == "" or
+           self.portEdit.text() == "" or
+           self.loginEdit.text() == "" or
+           self.passwordEdit.text() == ""):
             return False
         return True
 

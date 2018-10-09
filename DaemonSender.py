@@ -1,9 +1,9 @@
+import sys
 import time
 from datetime import datetime
 from os import walk
 from collections import defaultdict
 from email.parser import BytesFeedParser
-import winsound
 import os
 import helpers
 from helpers import messages_dir
@@ -16,23 +16,23 @@ class Daemon:
         self.server_credentials = server_credentials
         self.login = login
         self.password = password
-        self.dct = self._get_date2file_dict()
+        self.msg_files = self._get_dates_to_files()
 
     def run(self):
         self._send_early_messages()
         while True:
             current_time = datetime.now().strftime(helpers.date_format)
-            if current_time not in self.dct.keys():
+            if current_time not in self.msg_files.keys():
                 time.sleep(40)
                 continue
 
-            for files in self.dct[current_time]:
+            for files in self.msg_files[current_time]:
                 for filename in files:
                     self._send_message(filename)
 
             time.sleep(40)
 
-    def _get_date2file_dict(self):
+    def _get_dates_to_files(self) -> dict:
         dct = defaultdict(list)
         for root, dirs, files in walk("./"+messages_dir):
             for filename in files:
@@ -52,9 +52,9 @@ class Daemon:
 
     def _send_early_messages(self):
         current_time = datetime.now().strftime(helpers.date_format)
-        keys = [k for k in self.dct.keys() if k < current_time]
+        keys = [k for k in self.msg_files.keys() if k < current_time]
         for k in keys:
-            for file in self.dct[k]:
+            for file in self.msg_files[k]:
                 self._send_message(file)
 
 

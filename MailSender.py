@@ -1,4 +1,6 @@
+import logging
 import os
+from cgi import log
 from socket import *
 from base64 import *
 import time
@@ -8,9 +10,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.application import MIMEApplication
 from datetime import datetime
-from helpers import date_format
-from helpers import messages_dir
-from helpers import mime_time_format
+from helpers import date_format, messages_dir, mime_time_format
 
 
 class EmailMessage:
@@ -23,8 +23,9 @@ class EmailMessage:
         self.msg['To'] = email_to
         self.msg['Subject'] = subject
         self.msg['Date'] = time.strftime(mime_time_format, time.gmtime())
+        self.logger = logging.getLogger()
         text = MIMEText(body)
-        MIMEText.set_charset(text, "cp1251")
+        MIMEText.set_charset(text, "utf8")
         self.msg.attach(text)
         if attachments is not None:
             for file in attachments:
@@ -54,10 +55,9 @@ class MailSender:
         """
         self.sock.send(b"EHLO user\r\n")
         self.sock.recv(1024)
-        self.sock.recv(1024)
-        base64_str = ("\x00" + self.login + "\x00" + self.password).encode()
-        base64_str = b64encode(base64_str)
-        auth_msg = "AUTH PLAIN ".encode() + base64_str + "\r\n".encode()
+        base64_str = "\x00{0}\x00{1}".format(self.login, self.password).encode()
+        base64_bytes = b64encode(base64_str)
+        auth_msg = b''.join([b"AUTH PLAIN ", base64_bytes, b"\r\n"])
         self.sock.send(auth_msg)
         recv_auth = self.sock.recv(1024)
         if not recv_auth.decode().split(' ')[0] == "235":
@@ -70,8 +70,8 @@ class MailSender:
         :param message:
         :return:
         """
-        mail_from_msg = "MAIL FROM:" + message['From'] + "\r\n"
-        mail_to_msg = "RCPT TO:" + message['To'] + "\r\n"
+        mail_from_msg = "MAIL FROM:{0}\r\n".format(message['From'])
+        mail_to_msg = "RCPT TO:{0}\r\n".format(message['To'])
         self._send_command(mail_from_msg, 250)
         self._send_command(mail_to_msg, 250)
         self._send_command("DATA\r\n", 354)
@@ -87,7 +87,7 @@ class MailSender:
         """
         self.sock.send(command.encode())
         response = self.sock.recv(1024).decode()
-        print(response)
+        logging.info(response)
         if response.split(' ')[0] != str(expected_response_code):
             raise Exception(response)
 
@@ -100,9 +100,10 @@ class MailSender:
         sock = ssl.wrap_socket(socket(AF_INET, SOCK_STREAM))
         try:
             sock.connect(addr)
+            sock.recv(1024)
             return sock
         except Exception as e:
-            print(e)
+            logging.exception(e)
 
     def close_connection(self):
         self.sock.send("QUIT".encode())
@@ -117,5 +118,4 @@ class MailSender:
             os.makedirs(messages_dir)
         with open("./"+messages_dir+"/"+filename, "wb") as f:
             f.write(message.msg.as_bytes())
-            f.close()
         return filename
