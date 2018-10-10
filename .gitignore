@@ -2,6 +2,7 @@
 helpers.py
 pid.tmp
 *.pyc
+*.xml
 .idea/
 __pycache__/
 .coverage
