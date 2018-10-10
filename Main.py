@@ -46,9 +46,12 @@ class MainWindow(QtWidgets.QMainWindow):
                                             self.loginEdit.text(),
                                             self.passwordEdit.text())
         self.close()
-        self.senderWindow = SenderWindow(self.sender)
-        self.senderWindow.show()
-        self.start_daemon()
+        self.sender.sock = self.sender._get_connection((self.serverEdit.text(),
+                                                        int(self.portEdit.text())))
+        if self.sender.authorize():
+            self.senderWindow = SenderWindow(self.sender)
+            self.senderWindow.show()
+            self.start_daemon()
 
     def start_daemon(self):
         format_str = "python DaemonSender.py {0} {1} {2} {3}"
