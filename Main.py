@@ -1,16 +1,15 @@
 import sys
 import subprocess
-from PyQt5 import QtGui, QtCore, QtWidgets
+from PyQt5 import QtWidgets
 import os
 import psutil
 import MailSender
 from HelpWindow import HelpWindow
-from Help_UI import Ui_HelpWindow
 from Main_UI import Ui_MainWindow
 from SenderWindow import SenderWindow
-from helpers import good_password, good_login
 
-class MainWIndow(QtWidgets.QMainWindow):
+
+class MainWindow(QtWidgets.QMainWindow):
     def __init__(self, parent=None):
         QtWidgets.QWidget.__init__(self, parent)
         self.sender = None
@@ -77,9 +76,10 @@ class MainWIndow(QtWidgets.QMainWindow):
         self.helpWindow = HelpWindow()
         self.helpWindow.show()
 
+
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
-    window = MainWIndow()
+    window = MainWindow()
     window.show()
     sys.exit(app.exec_())
 
