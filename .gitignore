@@ -2,3 +2,5 @@
 helpers.py
 pid.tmp
 *.pyc
+*.xml
+*.pyc
