@@ -46,10 +46,13 @@ class MailSender:
         self.login = login
         self.password = password
         self.sock = None
+        self._is_authorized = False
 
     def __enter__(self):
-        self.sock = self._get_connection(self.server_credentials)
-        self.authorize()
+        if self.sock is None:
+            self.sock = self._get_connection(self.server_credentials)
+        if not self._is_authorized:
+            self.authorize()
         return self
 
     def __exit__(self, *args):
@@ -70,6 +73,7 @@ class MailSender:
         recv_auth = self.sock.recv(1024)
         if not recv_auth.decode().split(' ')[0] == "235":
             raise Exception(recv_auth.decode())
+        self._is_authorized = True
         return True
 
     def send_message(self, message: MIMEMultipart):

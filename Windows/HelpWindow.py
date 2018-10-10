@@ -1,6 +1,6 @@
 from PyQt5 import QtWidgets
 
-from Help_UI import Ui_HelpWindow
+from UI.Help_UI import Ui_HelpWindow
 
 
 class HelpWindow(QtWidgets.QMainWindow):
