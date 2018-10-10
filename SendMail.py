@@ -1,7 +1,6 @@
 from datetime import datetime
 from PyQt5 import QtWidgets
-import MailSender
-from MailSender import MailSender
+from MailSender import MailSender, EmailMessage
 from SendMail_UI import Ui_senderWindow
 
 
@@ -34,19 +33,20 @@ class SenderWindow(QtWidgets.QMainWindow):
             self.attachmentsLabel.setText(text)
 
     def click_send_now(self):
-        message = MailSender.EmailMessage(self.sender.login,
+        message = EmailMessage(self.sender.login,
                                           self.mailToEdit.text(),
                                           self.subjectEdit.text(),
                                           self.bodyEdit.toPlainText(),
                                           self.attachments)
         try:
-            self.sender.send_message(message.msg)
+            with self.sender as sndr:
+                sndr.send_message(message.msg)
             self.sendStatus.setText("OK")
         except Exception as e:
             self.sendStatus.setText(str(e))
 
     def click_send_later(self):
-        message = MailSender.EmailMessage(self.sender.login,
+        message = EmailMessage(self.sender.login,
                                           self.mailToEdit.text(),
                                           self.subjectEdit.text(),
                                           self.bodyEdit.toPlainText(),

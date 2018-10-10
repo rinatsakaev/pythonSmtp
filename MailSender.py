@@ -45,7 +45,15 @@ class MailSender:
                                    int(server_credentials[1]))
         self.login = login
         self.password = password
+        self.sock = None
+
+    def __enter__(self):
         self.sock = self._get_connection(self.server_credentials)
+        self.authorize()
+        return self
+
+    def __exit__(self, *args):
+        self._close_connection()
 
     def authorize(self):
         """
@@ -105,7 +113,7 @@ class MailSender:
         except Exception as e:
             logging.exception(e)
 
-    def close_connection(self):
+    def _close_connection(self):
         self.sock.send("QUIT".encode())
         self.sock.close()
 

@@ -45,9 +45,8 @@ class Daemon:
             parser = BytesFeedParser()
             parser.feed(byte_array)
             msg = parser.close()
-            self.sender.authorize()
-            self.sender.send_message(msg)
-            self.sender.close_connection()
+            with self.sender as sndr:
+                sndr.send_message(msg)
         os.remove("./"+messages_dir+"/"+filename)
 
     def _send_early_messages(self):

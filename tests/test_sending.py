@@ -22,13 +22,14 @@ class TestMailAuthorization(TestCase):
                             self.bad_login,
                             self.bad_password)
 
-        self.assertRaises(Exception, sender.authorize)
+        self.assertRaises(Exception, sender.__enter__)
 
     def test_authorization_good(self):
         sender = MailSender(self.credentials,
                             self.good_login,
                             self.good_password)
-
+        sender.sock = sender._get_connection((self.credentials[0],
+                                              int(self.credentials[1])))
         self.assertEqual(sender.authorize(), True)
 
 
@@ -42,10 +43,8 @@ class TestMailSender(TestCase):
         self.sender = MailSender(self.credentials,
                                  self.login,
                                  self.password)
-        self.sender.authorize()
 
     def tearDown(self):
-        self.sender.close_connection()
         self._clear_saved_messages()
 
     def test_simple_message(self):
@@ -53,7 +52,8 @@ class TestMailSender(TestCase):
                                self.recipient,
                                *self.msg_content)
         try:
-            self.sender.send_message(message.msg)
+            with self.sender as sndr:
+                sndr.send_message(message.msg)
         except Exception as e:
             self.fail(e)
 
@@ -63,7 +63,8 @@ class TestMailSender(TestCase):
                                *self.msg_content,
                                ["att1.jpg"])
         try:
-            self.sender.send_message(message.msg)
+            with self.sender as sndr:
+                sndr.send_message(message.msg)
         except Exception as e:
             self.fail(e)
         pass
