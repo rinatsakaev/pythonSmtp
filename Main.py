@@ -6,7 +6,7 @@ import psutil
 import MailSender
 from Main_UI import Ui_MainWindow
 from SendMail import SenderWindow
-
+from helpers import good_password, good_login
 
 class MainWIndow(QtWidgets.QMainWindow):
     def __init__(self, parent=None):
@@ -39,22 +39,25 @@ class MainWIndow(QtWidgets.QMainWindow):
             self.authorizationStatus.setText("Fill all the fields")
             return
 
-        self.sender = MailSender.MailSender((self.serverEdit.text(),
-                                             self.portEdit.text()),
-                                            self.loginEdit.text(),
-                                            self.passwordEdit.text())
+        # self.sender = MailSender.MailSender((self.serverEdit.text(),
+        #                                      self.portEdit.text()),
+        #                                     self.loginEdit.text(),
+        #                                     self.passwordEdit.text())
+        self.sender = MailSender.MailSender(("smtp.yandex.ru",
+                                             "465"),
+                                            good_login,
+                                            good_password)
         self.close()
-        self.sender.authorize()
         self.senderWindow = SenderWindow(self.sender)
         self.senderWindow.show()
         self.start_daemon()
 
     def start_daemon(self):
         format_str = "python DaemonSender.py {0} {1} {2} {3}"
-        start_string = format_str.format(self.serverEdit.text(),
-                                         self.portEdit.text(),
-                                         self.loginEdit.text(),
-                                         self.passwordEdit.text())
+        start_string = format_str.format(self.sender.server_credentials[0],
+                                         self.sender.server_credentials[1],
+                                         self.sender.login,
+                                         self.sender.password)
         if os.path.isfile("pid.tmp"):
             with open("pid.tmp", "r") as f:
                 pid = int(f.read())
