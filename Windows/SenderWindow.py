@@ -1,6 +1,6 @@
 from datetime import datetime
 from PyQt5 import QtWidgets
-from MailSender import MailSender, EmailMessage
+from Client.MailSender import MailSender, EmailMessage
 from UI.SendMail_UI import Ui_senderWindow
 
 
@@ -34,10 +34,10 @@ class SenderWindow(QtWidgets.QMainWindow):
 
     def click_send_now(self):
         message = EmailMessage(self.sender.login,
-                                          self.mailToEdit.text(),
-                                          self.subjectEdit.text(),
-                                          self.bodyEdit.toPlainText(),
-                                          self.attachments)
+                               self.mailToEdit.text(),
+                               self.subjectEdit.text(),
+                               self.bodyEdit.toPlainText(),
+                               self.attachments)
         try:
             with self.sender as sndr:
                 sndr.send_message(message.msg)
@@ -47,10 +47,10 @@ class SenderWindow(QtWidgets.QMainWindow):
 
     def click_send_later(self):
         message = EmailMessage(self.sender.login,
-                                          self.mailToEdit.text(),
-                                          self.subjectEdit.text(),
-                                          self.bodyEdit.toPlainText(),
-                                          self.attachments)
+                               self.mailToEdit.text(),
+                               self.subjectEdit.text(),
+                               self.bodyEdit.toPlainText(),
+                               self.attachments)
         datetime_object = datetime.strptime(self.sendDate.text(),
                                             '%d.%m %H:%M')
         if datetime_object is None:

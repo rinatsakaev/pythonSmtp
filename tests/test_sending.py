@@ -1,12 +1,12 @@
 import os
 import subprocess
 import unittest
-from MailSender import MailSender
-from MailSender import EmailMessage
+from Client.MailSender import MailSender
+from Client.MailSender import EmailMessage
 from unittest import TestCase
 from datetime import datetime
 import psutil
-from helpers import messages_dir, good_login, good_password
+from helpers import messages_dir, good_login, good_password, recipient
 
 
 class TestMailAuthorization(TestCase):
@@ -39,7 +39,7 @@ class TestMailSender(TestCase):
         self.password = good_password
         self.credentials = ("smtp.yandex.ru", "465")
         self.msg_content = ("some subject", "some body")
-        self.recipient = "r-sakaevv@yandex.ru"
+        self.recipient = recipient
         self.sender = MailSender(self.credentials,
                                  self.login,
                                  self.password)
@@ -77,7 +77,8 @@ class TestMailSender(TestCase):
         filename = MailSender.save_message(message, datetime_object)
         self.assertTrue(os.path.isfile("./"+messages_dir+"/"+filename))
 
-    def _clear_saved_messages(self):
+    @staticmethod
+    def _clear_saved_messages():
         for root, dirs, files in os.walk("./"+messages_dir):
             for filename in files:
                 if filename[-3:] == "msg":
@@ -90,13 +91,14 @@ class TestDaemon(TestCase):
         self.password = good_password
         self.credentials = ("smtp.yandex.ru", "465")
         self.msg_content = ("some subject", "sent by daemon")
-        self.recipient = "r-sakaevv@yandex.ru"
+        self.recipient = recipient
         self._kill_daemons()
 
     def tearDown(self):
         self._kill_daemons()
 
-    def _kill_daemons(self):
+    @staticmethod
+    def _kill_daemons():
         if os.path.isfile("pid.tmp"):
             with open("pid.tmp", "r") as f:
                 pid = int(f.read())

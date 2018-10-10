@@ -7,7 +7,7 @@ from email.parser import BytesFeedParser
 import os
 import helpers
 from helpers import messages_dir
-from MailSender import MailSender
+from Client.MailSender import MailSender
 
 
 class Daemon:
