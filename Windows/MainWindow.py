@@ -2,7 +2,7 @@ import subprocess
 from PyQt5 import QtWidgets
 import os
 import psutil
-import MailSender
+from Client import MailSender
 from Windows.HelpWindow import HelpWindow
 from UI.Main_UI import Ui_MainWindow
 from Windows.SenderWindow import SenderWindow

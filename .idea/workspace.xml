@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/SenderWindow.py" line="23" mnemonic="9" />
+    <bookmark url="file://$PROJECT_DIR$/Windows/SenderWindow.py" line="23" mnemonic="9" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9054e418-187a-48e4-8b97-11b6306aa3c8" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/HelpWindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/HelpWindow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Help_UI.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/Help_UI.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main_UI.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/Main_UI.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SendMail_UI.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/SendMail_UI.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SenderWindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/SenderWindow.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MIME/MIMEBinary.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MIME/MIMEMessage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MIME/MIMEText.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_mime.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.pytest_cache/v/cache/nodeids" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DaemonSender.py" beforeDir="false" afterPath="$PROJECT_DIR$/Client/DaemonSender.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MailSender.py" beforeDir="false" afterPath="$PROJECT_DIR$/Client/MailSender.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Client/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Windows/MainWindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/Windows/MainWindow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Windows/SenderWindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/Windows/SenderWindow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helpers.py" beforeDir="false" afterPath="$PROJECT_DIR$/helpers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_sending.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_sending.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,21 +29,21 @@
     <session id="1140611862">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="16" />
-          <entry key="project.open.time.0" value="2" />
+          <entry key="project.closed" value="17" />
+          <entry key="project.open.time.0" value="3" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.4" value="2" />
           <entry key="project.open.time.5" value="5" />
           <entry key="project.open.time.6" value="2" />
           <entry key="project.open.time.7" value="2" />
-          <entry key="project.opened" value="17" />
+          <entry key="project.opened" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="md" value="1" />
-          <entry key="py" value="34" />
+          <entry key="py" value="47" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
@@ -44,21 +51,21 @@
         <counts>
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="34" />
+          <entry key="Python" value="47" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="13" />
+          <entry key="dummy" value="25" />
           <entry key="md" value="124" />
-          <entry key="py" value="4631" />
+          <entry key="py" value="7590" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Markdown" value="124" />
-          <entry key="PLAIN_TEXT" value="13" />
-          <entry key="Python" value="4631" />
+          <entry key="PLAIN_TEXT" value="25" />
+          <entry key="Python" value="7590" />
         </counts>
       </usages-collector>
     </session>
@@ -66,112 +73,121 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Main.py">
+        <entry file="file://$PROJECT_DIR$/Client/Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="53" column="31" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
+            <state relative-caret-position="51">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Client/MailSender.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+              <folding>
+                <marker date="1539195121392" expanded="true" signature="1593:1632" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/test_sending.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1156">
+              <caret line="122" column="26" selection-start-line="122" selection-start-column="26" selection-end-line="122" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#293#1138#0" />
+                <element signature="e#2971#4348#0" />
+                <marker date="1539192520225" expanded="true" signature="4350:4352" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://C:/Program Files (x86)/Microsoft Visual Studio/Shared/Python36_64/Lib/unittest/case.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="457">
+              <caret line="821" selection-start-line="821" selection-end-line="821" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Client/DaemonSender.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="901">
+              <caret line="53" column="69" selection-start-line="53" selection-start-column="69" selection-end-line="53" selection-end-column="69" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HelpWindow.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-              <folding>
-                <element signature="e#0#27#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MailSender.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="113" selection-start-line="113" selection-end-line="113" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-                <marker date="1539149588101" expanded="true" signature="1923:1962" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DaemonSender.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="53" column="69" lean-forward="true" selection-start-line="53" selection-start-column="69" selection-end-line="53" selection-end-column="69" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-                <marker date="1539146479670" expanded="true" signature="1038:1047" ph="..." />
-                <marker date="1539146479670" expanded="true" signature="1283:1631" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/UI/Main_UI.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1224">
-              <caret line="72" column="62" selection-start-line="72" selection-start-column="62" selection-end-line="72" selection-end-column="62" />
-              <folding>
-                <element signature="e#204#246#0" expanded="true" />
+                <marker date="1539192520252" expanded="true" signature="1045:1054" ph="..." />
+                <marker date="1539192520252" expanded="true" signature="1290:1638" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/helpers.py">
+        <entry file="file://$PROJECT_DIR$/MIME/MIMEMessage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="24" lean-forward="true" selection-start-column="24" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/UI/SendMail_UI.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-463">
-              <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://C:/Program Files (x86)/Microsoft Visual Studio/Shared/Python36_64/Lib/ssl.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="1099" selection-start-line="1099" selection-end-line="1099" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/UI/Help_UI.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SenderWindow.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
+            <state relative-caret-position="34">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
               <folding>
-                <element signature="e#0#29#0" expanded="true" />
+                <element signature="e#0#11#0" expanded="true" />
+                <marker date="1539195121401" expanded="true" signature="49:50" ph="..." />
+                <marker date="1539195121401" expanded="true" signature="902:1056" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MIME/MIMEText.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MIME/MIMEBinary.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/test_mime.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+                <marker date="1539194976705" expanded="true" signature="247:252" ph="..." />
+                <marker date="1539194976705" expanded="true" signature="1040:19058" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://C:/Program Files (x86)/Microsoft Visual Studio/Shared/Python36_64/Lib/unittest/loader.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -195,6 +211,7 @@
       <find>excep</find>
       <find>with open</find>
       <find>qfiledialog</find>
+      <find>recipien</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -222,24 +239,34 @@
         <option value="$PROJECT_DIR$/README" />
         <option value="$PROJECT_DIR$/pid.tmp" />
         <option value="$PROJECT_DIR$/test_sending.py" />
-        <option value="$PROJECT_DIR$/tests/test_sending.py" />
         <option value="$PROJECT_DIR$/DaemonSender.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Main_UI.py" />
         <option value="$PROJECT_DIR$/SendMail.py" />
         <option value="$PROJECT_DIR$/HelpWindow.py" />
         <option value="$PROJECT_DIR$/Help_UI.py" />
-        <option value="$PROJECT_DIR$/helpers.py" />
-        <option value="$PROJECT_DIR$/MailSender.py" />
+        <option value="$PROJECT_DIR$/Windows/MainWindow.py" />
         <option value="$PROJECT_DIR$/Main.py" />
+        <option value="$PROJECT_DIR$/MIMETest.py" />
+        <option value="$PROJECT_DIR$/MailSender.py" />
+        <option value="$PROJECT_DIR$/helpers.py" />
+        <option value="$PROJECT_DIR$/MIME.py" />
+        <option value="$PROJECT_DIR$/MIME/MIMEText.py" />
+        <option value="$PROJECT_DIR$/MIME/MIME.py" />
+        <option value="$PROJECT_DIR$/MIME/MIMEBinary.py" />
+        <option value="$PROJECT_DIR$/tests/test_sending.py" />
+        <option value="$PROJECT_DIR$/tests/test_all.py" />
+        <option value="$PROJECT_DIR$/tests/test_mime.py" />
+        <option value="$PROJECT_DIR$/Client/MailSender.py" />
+        <option value="$PROJECT_DIR$/MIME/MIMEMessage.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-2104" />
-    <option name="y" value="-12" />
-    <option name="width" value="1440" />
-    <option name="height" value="780" />
+    <option name="x" value="-1088" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -255,6 +282,31 @@
             <path>
               <item name="mail" type="b2602c69:ProjectViewProjectNode" />
               <item name="mail" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mail" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mail" type="462c0819:PsiDirectoryNode" />
+              <item name="Client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mail" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mail" type="462c0819:PsiDirectoryNode" />
+              <item name="MIME" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mail" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mail" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mail" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mail" type="462c0819:PsiDirectoryNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mail" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mail" type="462c0819:PsiDirectoryNode" />
+              <item name="Windows" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -272,8 +324,11 @@
       <recent name="C:\Users\Rinat\PycharmProjects\mail" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Rinat\Desktop\mail\MIME" />
+      <recent name="C:\Users\Rinat\Desktop\mail\Client" />
+      <recent name="C:\Users\Rinat\Desktop\mail\Windows" />
+      <recent name="C:\Users\Rinat\Desktop\mail\UI" />
       <recent name="C:\Users\Rinat\Desktop\mail\tests" />
-      <recent name="C:\Users\Rinat\PycharmProjects\mail" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -288,7 +343,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Main">
+  <component name="RunManager" selected="Python tests.Unittests in test_sending.py">
     <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="mail" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -297,11 +352,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Client" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Client/Main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -310,7 +365,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="python_exe_unpack" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="test_all" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="mail" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -318,11 +373,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Documents/GitHub/python-exe-unpacker" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/Documents/GitHub/python-exe-unpacker/python_exe_unpack.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/test_all.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -331,7 +386,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for test_sending.TestMailAuthorization" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for test_mime.TestMime.test_simple_mime" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="mail" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -341,11 +396,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_sending.TestMailAuthorization&quot;" />
+      <option name="_new_target" value="&quot;test_mime.TestMime.test_simple_mime&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for test_sending.TestMailAuthorization.test_authorization_good" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests in test_mime.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="mail" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -355,8 +410,8 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_sending.TestMailAuthorization.test_authorization_good&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_mime.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="Unittests in test_sending.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
@@ -375,18 +430,18 @@
     </configuration>
     <list>
       <item itemvalue="Python tests.Unittests in test_sending.py" />
+      <item itemvalue="Python tests.Unittests in test_mime.py" />
+      <item itemvalue="Python tests.Unittests for test_mime.TestMime.test_simple_mime" />
+      <item itemvalue="Python.test_all" />
       <item itemvalue="Python.Main" />
-      <item itemvalue="Python tests.Unittests for test_sending.TestMailAuthorization.test_authorization_good" />
-      <item itemvalue="Python.python_exe_unpack" />
-      <item itemvalue="Python tests.Unittests for test_sending.TestMailAuthorization" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Main" />
         <item itemvalue="Python tests.Unittests in test_sending.py" />
-        <item itemvalue="Python tests.Unittests for test_sending.TestMailAuthorization" />
-        <item itemvalue="Python tests.Unittests for test_sending.TestMailAuthorization.test_authorization_good" />
-        <item itemvalue="Python.python_exe_unpack" />
+        <item itemvalue="Python tests.Unittests in test_mime.py" />
+        <item itemvalue="Python.Main" />
+        <item itemvalue="Python.test_all" />
+        <item itemvalue="Python tests.Unittests for test_mime.TestMime.test_simple_mime" />
       </list>
     </recent_temporary>
   </component>
@@ -404,35 +459,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_test_sending_py - 2018.10.10 at 09h 37m 22s.xml">
-      <configuration name="Unittests in test_sending.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_mime_py - 2018.10.10 at 23h 02m 38s.xml">
+      <configuration name="Unittests in test_mime.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_sending_py - 2018.10.10 at 09h 37m 45s.xml">
-      <configuration name="Unittests in test_sending.py" configurationId="tests" />
+    <history-entry file="Unittests_for_test_mime_TestMime_test_simple_mime - 2018.10.10 at 23h 04m 44s.xml">
+      <configuration name="Unittests for test_mime.TestMime.test_simple_mime" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_sending_py - 2018.10.10 at 09h 38m 38s.xml">
-      <configuration name="Unittests in test_sending.py" configurationId="tests" />
+    <history-entry file="Unittests_for_test_mime_TestMime_test_simple_mime - 2018.10.10 at 23h 04m 52s.xml">
+      <configuration name="Unittests for test_mime.TestMime.test_simple_mime" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_sending_py - 2018.10.10 at 09h 38m 55s.xml">
-      <configuration name="Unittests in test_sending.py" configurationId="tests" />
+    <history-entry file="Unittests_for_test_mime_TestMime_test_simple_mime - 2018.10.10 at 23h 05m 07s.xml">
+      <configuration name="Unittests for test_mime.TestMime.test_simple_mime" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_sending_py - 2018.10.10 at 09h 39m 12s.xml">
-      <configuration name="Unittests in test_sending.py" configurationId="tests" />
+    <history-entry file="Unittests_for_test_mime_TestMime_test_simple_mime - 2018.10.10 at 23h 05m 09s.xml">
+      <configuration name="Unittests for test_mime.TestMime.test_simple_mime" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_sending_py - 2018.10.10 at 09h 39m 25s.xml">
-      <configuration name="Unittests in test_sending.py" configurationId="tests" />
+    <history-entry file="Unittests_for_test_mime_TestMime_test_simple_mime - 2018.10.10 at 23h 05m 10s.xml">
+      <configuration name="Unittests for test_mime.TestMime.test_simple_mime" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_sending_py - 2018.10.10 at 09h 49m 13s.xml">
-      <configuration name="Unittests in test_sending.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_mime_py - 2018.10.10 at 23h 05m 22s.xml">
+      <configuration name="Unittests in test_mime.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_sending_py - 2018.10.10 at 10h 00m 39s.xml">
-      <configuration name="Unittests in test_sending.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_mime_py - 2018.10.10 at 23h 06m 18s.xml">
+      <configuration name="Unittests in test_mime.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_sending_py - 2018.10.10 at 10h 00m 42s.xml">
-      <configuration name="Unittests in test_sending.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_mime_py - 2018.10.10 at 23h 06m 27s.xml">
+      <configuration name="Unittests in test_mime.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_sending_py - 2018.10.10 at 10h 33m 11s.xml">
-      <configuration name="Unittests in test_sending.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_mime_py - 2018.10.10 at 23h 06m 28s.xml">
+      <configuration name="Unittests in test_mime.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -445,15 +500,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-1088" y="-837" width="1096" height="1896" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11064278" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1994329" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info id="Structure" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.48027718" weight="0.3275488" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.51285344" visible="true" weight="0.46420825" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.7847044" weight="0.3991323" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.48027718" weight="0.32746878" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.51285344" visible="true" weight="0.19466515" />
+      <window_info anchor="bottom" x="-1002" y="36" width="980" height="549" id="Debug" order="3" sideWeight="0.7847044" type="FLOATING" weight="0.24801362" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4914712" />
@@ -494,64 +550,54 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/MailSender.py</url>
-          <line>25</line>
-          <option name="timeStamp" value="45" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/MailSender.py</url>
-          <line>29</line>
-          <option name="timeStamp" value="46" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/MailSender.py</url>
-          <line>28</line>
-          <option name="timeStamp" value="47" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/SenderWindow.py</url>
+          <url>file://$PROJECT_DIR$/Windows/SenderWindow.py</url>
           <line>12</line>
           <option name="timeStamp" value="54" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/SenderWindow.py</url>
+          <url>file://$PROJECT_DIR$/Windows/SenderWindow.py</url>
           <line>41</line>
           <option name="timeStamp" value="55" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/SenderWindow.py</url>
+          <url>file://$PROJECT_DIR$/Windows/SenderWindow.py</url>
           <line>42</line>
           <option name="timeStamp" value="56" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/MailSender.py</url>
-          <line>51</line>
+          <url>file://$PROJECT_DIR$/Client/MailSender.py</url>
+          <line>48</line>
           <option name="timeStamp" value="57" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/MailSender.py</url>
-          <line>52</line>
+          <url>file://$PROJECT_DIR$/Client/MailSender.py</url>
+          <line>49</line>
           <option name="timeStamp" value="58" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/MailSender.py</url>
-          <line>53</line>
+          <url>file://$PROJECT_DIR$/Client/MailSender.py</url>
+          <line>50</line>
           <option name="timeStamp" value="59" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/MailSender.py</url>
-          <line>54</line>
+          <url>file://$PROJECT_DIR$/Client/MailSender.py</url>
+          <line>51</line>
           <option name="timeStamp" value="60" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/MailSender.py</url>
-          <line>55</line>
+          <url>file://$PROJECT_DIR$/Client/MailSender.py</url>
+          <line>52</line>
           <option name="timeStamp" value="61" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/SenderWindow.py</url>
+          <url>file://$PROJECT_DIR$/Windows/SenderWindow.py</url>
           <line>45</line>
           <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/MIME/MIMEMessage.py</url>
+          <line>103</line>
+          <option name="timeStamp" value="73" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -570,6 +616,12 @@
         <watch expression="datetime.timestamp(datetime.now())" language="Python" />
         <watch expression="os.path.isdir(&quot;messages&quot;)" language="Python" />
         <watch expression="base64_str.encode()" language="Python" />
+        <watch expression="re.match(&quot;*?&quot;, msg_str)" language="Python" />
+        <watch expression="msg_str" language="Python" />
+        <watch expression="re.search('boundary=&quot;.*?&quot;', msg_str)" language="Python" />
+        <watch expression="re.match('.*?boundary=&quot;(.*?)&quot;', msg_str).group(1)" language="Python" />
+        <watch expression="mime.as_bytes()" language="Python" />
+        <watch expression="re.match(reg_exp_date, msg_str).group(1)" language="Python" />
       </configuration>
       <configuration name="PythonConfigurationType">
         <watch expression="cmd_string == start_string[6:]" language="Python" />
@@ -582,71 +634,69 @@
         <watch expression="self.dct.keys()" language="Python" />
         <watch expression="[k for k in self.dct.keys() if k &lt; current_time]" language="Python" />
         <watch expression="self.dct[k]" language="Python" />
+        <watch expression="msg.as_bytes()" language="Python" />
+        <watch expression="msg.as_bytes()" language="Python" />
+        <watch expression="res" language="Python" />
+        <watch expression="f" language="Python" />
+        <watch expression="attachment.content" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
       <expression>
-        <expression-string>base64_str.encode()</expression-string>
+        <expression-string>re.match(reg_exp_date, msg_str).group(1)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>base64_str</expression-string>
+        <expression-string>re.match(reg_exp_date, msg_str, flags=re.DOTALL).group(1)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>self.dct[k]</expression-string>
+        <expression-string>re.match(reg_exp_date, msg_str, flags=re.DOTALL)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>[k for k in self.dct.keys() if k &lt; current_time]</expression-string>
+        <expression-string>mime.as_bytes()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>self.dct.keys()</expression-string>
+        <expression-string>re.match('.*?boundary=&quot;(.*?)&quot;', msg_str).group(1)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>current_time.date</expression-string>
+        <expression-string>re.match('.*?boundary=&quot;(.*?)&quot;', msg_str)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>current_time.time()</expression-string>
+        <expression-string>re.match(&quot;.*?boundary=(.*?)&quot;, msg_str)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>current_time.date()</expression-string>
+        <expression-string>re.match(&quot;boundary=(.*?)&quot;, msg_str)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>current_time</expression-string>
+        <expression-string>re.match(r'boundary=(.*?)\&quot;', msg_str)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>dct.keys()</expression-string>
+        <expression-string>re.match(r'boundary=(.*?)&quot;', msg_str)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://C:/Python32/Lib/ssl.py" />
-    <entry file="file://C:/Python32/Lib/email/header.py" />
-    <entry file="file://C:/Python32/Lib/email/generator.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/unittest/suite.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/unittest/case.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/ssl.py" />
-    <entry file="file://C:/Python32/Lib/email/headerregistry.py" />
     <entry file="file://C:/Python32/Lib/email/policy.py" />
     <entry file="file://$PROJECT_DIR$/ddsf.py" />
     <entry file="file://$PROJECT_DIR$/out.py" />
@@ -734,35 +784,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Program Files (x86)/Microsoft Visual Studio/Shared/Python36_64/Lib/base64.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Program Files (x86)/Microsoft Visual Studio/Shared/Python36_64/Lib/email/message.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="390" selection-start-line="390" selection-end-line="390" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files (x86)/Microsoft Visual Studio/Shared/Python36_64/Lib/unittest/case.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="158" selection-start-line="158" selection-end-line="158" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_sending.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="28" column="44" lean-forward="true" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <marker date="1539146332881" expanded="true" signature="4349:4351" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -780,13 +805,50 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1224">
           <caret line="72" column="62" selection-start-line="72" selection-start-column="62" selection-end-line="72" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Windows/MainWindow.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
           <folding>
-            <element signature="e#204#246#0" expanded="true" />
+            <element signature="e#0#17#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HelpWindow.py">
+    <entry file="file://C:/Program Files (x86)/Microsoft Visual Studio/Shared/Python36_64/Lib/ssl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18394">
+          <caret line="1099" selection-start-line="1099" selection-end-line="1099" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UI/Help_UI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Windows/SenderWindow.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UI/SendMail_UI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="2" column="54" selection-start-line="2" selection-start-column="54" selection-end-line="2" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Windows/HelpWindow.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
@@ -796,74 +858,120 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UI/Help_UI.py">
+    <entry file="file://C:/Program Files (x86)/Microsoft Visual Studio/Shared/Python36_64/Lib/base64.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DaemonSender.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="53" column="69" lean-forward="true" selection-start-line="53" selection-start-column="69" selection-end-line="53" selection-end-column="69" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <marker date="1539146479670" expanded="true" signature="1038:1047" ph="..." />
-            <marker date="1539146479670" expanded="true" signature="1283:1631" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UI/SendMail_UI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-463">
-          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SenderWindow.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files (x86)/Microsoft Visual Studio/Shared/Python36_64/Lib/ssl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="1099" selection-start-line="1099" selection-end-line="1099" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MailSender.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="113" selection-start-line="113" selection-end-line="113" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-            <marker date="1539149588101" expanded="true" signature="1923:1962" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="53" column="31" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="814">
+          <caret line="536" selection-start-line="536" selection-end-line="536" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/helpers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="24" lean-forward="true" selection-start-column="24" selection-end-column="24" />
+        <state relative-caret-position="85">
+          <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files (x86)/Microsoft Visual Studio/Shared/Python36_64/Lib/unittest/loader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files (x86)/Microsoft Visual Studio/Shared/Python36_64/Lib/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="821" selection-start-line="821" selection-end-line="821" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_sending.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1156">
+          <caret line="122" column="26" selection-start-line="122" selection-start-column="26" selection-end-line="122" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#293#1138#0" />
+            <element signature="e#2971#4348#0" />
+            <marker date="1539192520225" expanded="true" signature="4350:4352" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_all.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_mime.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <marker date="1539194976705" expanded="true" signature="247:252" ph="..." />
+            <marker date="1539194976705" expanded="true" signature="1040:19058" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MIME/MIMEBinary.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MIME/MIMEText.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/DaemonSender.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="53" column="69" selection-start-line="53" selection-start-column="69" selection-end-line="53" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1539192520252" expanded="true" signature="1045:1054" ph="..." />
+            <marker date="1539192520252" expanded="true" signature="1290:1638" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/MailSender.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+          <folding>
+            <marker date="1539195121392" expanded="true" signature="1593:1632" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/Main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MIME/MIMEMessage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <marker date="1539195121401" expanded="true" signature="49:50" ph="..." />
+            <marker date="1539195121401" expanded="true" signature="902:1056" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

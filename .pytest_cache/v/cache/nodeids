@@ -1,6 +1,0 @@
-[
-  "test_sending.py::TestMailAuthorization::test_authorization_bad",
-  "test_sending.py::TestMailAuthorization::test_authorization_good",
-  "test_sending.py::TestMailSender::test_attachments",
-  "test_sending.py::TestMailSender::test_simple_message"
-]

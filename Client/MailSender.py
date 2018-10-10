@@ -1,15 +1,13 @@
 import logging
 import os
-from cgi import log
 from socket import *
 from base64 import *
 import time
 import ssl
-from os.path import basename
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
-from email.mime.application import MIMEApplication
 from datetime import datetime
+from MIME.MIMEMessage import MIMEMessage
+from MIME.MIMEBinary import MIMEBinary
+from MIME.MIMEText import MIMEText
 from helpers import date_format, messages_dir, mime_time_format
 
 
@@ -18,22 +16,17 @@ class EmailMessage:
     Class for constructing EmailMessage data
     """
     def __init__(self, email_from, email_to, subject, body, attachments=None):
-        self.msg = MIMEMultipart()
-        self.msg['From'] = email_from
-        self.msg['To'] = email_to
-        self.msg['Subject'] = subject
-        self.msg['Date'] = time.strftime(mime_time_format, time.gmtime())
+        self.msg = MIMEMessage()
+        self.msg.base_part['From'] = email_from
+        self.msg.base_part['To'] = email_to
+        self.msg.base_part['Subject'] = subject
+        self.msg.base_part['Date'] = time.strftime(mime_time_format, time.gmtime())
         self.logger = logging.getLogger()
-        text = MIMEText(body)
-        MIMEText.set_charset(text, "utf8")
-        self.msg.attach(text)
+        body = MIMEText(body)
+        self.msg.add_attachment(body)
         if attachments is not None:
             for file in attachments:
-                with open(file, "rb") as f:
-                    part_content = MIMEApplication(f.read(),
-                                                   Name=basename(file))
-                part_content['Content-Disposition'] = 'attachment; filename="%s"' % basename(file)
-                self.msg.attach(part_content)
+                self.msg.add_attachment(MIMEBinary(file))
 
 
 class MailSender:
@@ -76,14 +69,14 @@ class MailSender:
         self._is_authorized = True
         return True
 
-    def send_message(self, message: MIMEMultipart):
+    def send_message(self, message):
         """
         Sends DATA to server
         :param message:
         :return:
         """
-        mail_from_msg = "MAIL FROM:{0}\r\n".format(message['From'])
-        mail_to_msg = "RCPT TO:{0}\r\n".format(message['To'])
+        mail_from_msg = "MAIL FROM:{0}\r\n".format(message.base_part['From'])
+        mail_to_msg = "RCPT TO:{0}\r\n".format(message.base_part['To'])
         self._send_command(mail_from_msg, 250)
         self._send_command(mail_to_msg, 250)
         self._send_command("DATA\r\n", 354)
