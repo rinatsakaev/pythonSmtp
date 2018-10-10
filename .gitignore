@@ -2,3 +2,8 @@
 helpers.py
 pid.tmp
 *.pyc
+.idea/
+__pycache__/
+.coverage
+convert.bat
+sendMailWindow.ui
