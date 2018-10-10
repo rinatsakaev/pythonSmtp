@@ -4,8 +4,10 @@ from PyQt5 import QtGui, QtCore, QtWidgets
 import os
 import psutil
 import MailSender
+from HelpWindow import HelpWindow
+from Help_UI import Ui_HelpWindow
 from Main_UI import Ui_MainWindow
-from SendMail import SenderWindow
+from SenderWindow import SenderWindow
 from helpers import good_password, good_login
 
 class MainWIndow(QtWidgets.QMainWindow):
@@ -21,6 +23,7 @@ class MainWIndow(QtWidgets.QMainWindow):
         self.passwordEdit = self.ui.passwordEdit
         self.authorizationStatus = self.ui.authorizeStatusLabel
         self.ui.authorizeButton.clicked.connect(self.click_authorize)
+        self.ui.helpButton.clicked.connect(self.click_help)
 
     def check_fields(self):
         """
@@ -39,14 +42,10 @@ class MainWIndow(QtWidgets.QMainWindow):
             self.authorizationStatus.setText("Fill all the fields")
             return
 
-        # self.sender = MailSender.MailSender((self.serverEdit.text(),
-        #                                      self.portEdit.text()),
-        #                                     self.loginEdit.text(),
-        #                                     self.passwordEdit.text())
-        self.sender = MailSender.MailSender(("smtp.yandex.ru",
-                                             "465"),
-                                            good_login,
-                                            good_password)
+        self.sender = MailSender.MailSender((self.serverEdit.text(),
+                                             self.portEdit.text()),
+                                            self.loginEdit.text(),
+                                            self.passwordEdit.text())
         self.close()
         self.senderWindow = SenderWindow(self.sender)
         self.senderWindow.show()
@@ -74,9 +73,13 @@ class MainWIndow(QtWidgets.QMainWindow):
         with open("pid.tmp", "w") as f:
             f.write(str(process.pid))
 
+    def click_help(self):
+        self.helpWindow = HelpWindow()
+        self.helpWindow.show()
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
     window = MainWIndow()
     window.show()
     sys.exit(app.exec_())
+
