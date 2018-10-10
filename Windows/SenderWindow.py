@@ -1,7 +1,7 @@
 from datetime import datetime
 from PyQt5 import QtWidgets
 from MailSender import MailSender, EmailMessage
-from SendMail_UI import Ui_senderWindow
+from UI.SendMail_UI import Ui_senderWindow
 
 
 class SenderWindow(QtWidgets.QMainWindow):
