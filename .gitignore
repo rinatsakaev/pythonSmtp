@@ -8,3 +8,5 @@ __pycache__/
 .coverage
 convert.bat
 sendMailWindow.ui
+*.qm
+venv/

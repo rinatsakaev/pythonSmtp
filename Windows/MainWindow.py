@@ -6,7 +6,7 @@ from Client import MailSender
 from Windows.HelpWindow import HelpWindow
 from UI.Main_UI import Ui_MainWindow
 from Windows.SenderWindow import SenderWindow
-
+from socket import gaierror
 
 class MainWindow(QtWidgets.QMainWindow):
     def __init__(self, parent=None):
@@ -32,25 +32,36 @@ class MainWindow(QtWidgets.QMainWindow):
            self.portEdit.text() == "" or
            self.loginEdit.text() == "" or
            self.passwordEdit.text() == ""):
-            return False
-        return True
+            return "Fill all the fields"
+        try:
+            port = int(self.portEdit.text())
+            if port > 65535 or port <= 0:
+                return "Port should be >0 and <=65535"
+        except Exception:
+            return "Port should be integer"
+        return None
 
     def click_authorize(self):
-        if not self.check_fields():
-            self.authorizationStatus.setText("Fill all the fields")
+        authorization_result = self.check_fields()
+        if authorization_result is not None:
+            self.authorizationStatus.setText(authorization_result)
             return
-
-        self.sender = MailSender.MailSender((self.serverEdit.text(),
-                                             self.portEdit.text()),
-                                            self.loginEdit.text(),
-                                            self.passwordEdit.text())
-        self.close()
-        self.sender.sock = self.sender._get_connection((self.serverEdit.text(),
-                                                        int(self.portEdit.text())))
-        if self.sender.authorize():
-            self.senderWindow = SenderWindow(self.sender)
-            self.senderWindow.show()
-            self.start_daemon()
+        try:
+            self.sender = MailSender.MailSender((self.serverEdit.text(),
+                                                 self.portEdit.text()),
+                                                self.loginEdit.text(),
+                                                self.passwordEdit.text())
+            self.sender.sock = self.sender._get_connection((self.serverEdit.text(),
+                                                            int(self.portEdit.text())))
+            if self.sender.authorize():
+                self.close()
+                self.senderWindow = SenderWindow(self.sender)
+                self.senderWindow.show()
+                self.start_daemon()
+            else:
+                self.authorizationStatus.setText("Wrong login or password")
+        except gaierror:
+            self.authorizationStatus.setText("Can't connect to server")
 
     def start_daemon(self):
         format_str = "python DaemonSender.py {0} {1} {2} {3}"

@@ -9,7 +9,7 @@ from MIME.MIMEMessage import MIMEMessage
 from MIME.MIMEBinary import MIMEBinary
 from MIME.MIMEText import MIMEText
 from helpers import date_format, messages_dir, mime_time_format
-
+from socket import gaierror
 
 class EmailMessage:
     """
@@ -65,7 +65,7 @@ class MailSender:
         self.sock.send(auth_msg)
         recv_auth = self.sock.recv(1024)
         if not recv_auth.decode().split(' ')[0] == "235":
-            raise Exception(recv_auth.decode())
+            return False
         self._is_authorized = True
         return True
 
@@ -107,8 +107,9 @@ class MailSender:
             sock.connect(addr)
             sock.recv(1024)
             return sock
-        except Exception as e:
+        except gaierror as e:
             logging.exception(e)
+            raise
 
     def _close_connection(self):
         self.sock.send("QUIT".encode())
