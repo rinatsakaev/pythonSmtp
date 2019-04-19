@@ -16,10 +16,12 @@ class MIMEMessage:
 
     def as_bytes(self):
         res = self._get_mime_headers(self.base_part)
-        res += bytes("---{0}\n".format(self.boundary), encoding="utf8")
         for attachment in self._attachments:
+            res += bytes("--{0}\n".format(self.boundary), encoding="utf8")
             res += self._get_mime_headers(attachment.headers)
             res += attachment.content
+            res += b"\n"
+        res += bytes("\n--{0}--".format(self.boundary), encoding="utf8")
         return res
 
     @staticmethod
@@ -27,7 +29,7 @@ class MIMEMessage:
         res = ""
         for k, v in headers.items():
             res += "{key}: {value}\n".format(key=k, value=v)
-        return bytes(res + "\n", encoding="utf8")
+        return bytes(res+"\n", encoding="utf8")
 
     def _check_fields(self):
         if not self.base_part['To']:
